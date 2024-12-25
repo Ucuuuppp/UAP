@@ -1,10 +1,9 @@
 import os
+import subprocess
 import streamlit as st
 
-@st.cache_resource
-def install_detectron():
-    os.system("pip install git+https://github.com/facebookresearch/detectron2.git")
-install_detectron()
+subprocess.run(["python", "install.py"])
+
 
 import cv2
 import numpy as np
