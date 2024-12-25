@@ -5,3 +5,4 @@ gdown
 numpy
 opencv_python
 streamlit
+git+https://github.com/facebookresearch/detectron2.git
