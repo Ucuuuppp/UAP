@@ -8,4 +8,4 @@ def install_requirements():
 
 @st.cache_resource
 def install_detectron2():
-    subprocess.check_call(["sudo", os.sys.executable, "-m", "pip", "install", "git+https://github.com/facebookresearch/detectron2.git"])
+    subprocess.check_call([os.sys.executable, "-m", "pip", "install", "git+https://github.com/facebookresearch/detectron2.git", '--user'])
