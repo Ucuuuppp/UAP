@@ -1,7 +1,11 @@
 import os
-os.system("pip install git+https://github.com/facebookresearch/detectron2.git")
-
 import streamlit as st
+
+@st.cache_resource
+def install_detectron():
+    os.system("pip install git+https://github.com/facebookresearch/detectron2.git")
+install_detectron()
+
 import cv2
 import numpy as np
 from detectron2.utils.visualizer import Visualizer, ColorMode
