@@ -1,9 +1,11 @@
+import os
+os.system("pip install git+https://github.com/facebookresearch/detectron2.git")
+
 import streamlit as st
 import cv2
 import numpy as np
 from detectron2.utils.visualizer import Visualizer, ColorMode
 from detectron2.data import MetadataCatalog
-import os
 import cv2
 import gdown
 from detectron2.data import DatasetCatalog, MetadataCatalog
