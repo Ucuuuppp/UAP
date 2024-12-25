@@ -1,9 +1,10 @@
 import os
 import subprocess
 import streamlit as st
+import install
 
-subprocess.run(["python", "install.py"])
-
+install.install_requirements()
+install.install_detectron2()
 
 import cv2
 import numpy as np
