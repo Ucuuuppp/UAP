@@ -5,6 +5,7 @@ from detectron2.utils.visualizer import Visualizer, ColorMode
 from detectron2.data import MetadataCatalog
 import os
 import cv2
+import gdown
 from detectron2.data import DatasetCatalog, MetadataCatalog
 from detectron2.utils.visualizer import Visualizer
 from detectron2.utils.visualizer import ColorMode
@@ -21,6 +22,13 @@ Upload an image, and the system will detect objects using two models:
 - **Faster-RCNN**
 Results will be displayed side by side for comparison.
 """)
+
+@st.cache_resource
+def download_model():
+    gdown.download_folder("https://drive.google.com/drive/folders/1o08O30SP23uskXhIHZuQxXSNeEzbUcHh?usp=sharing", remaining_ok=True)
+    gdown.download_folder("https://drive.google.com/drive/folders/1Zenq1klMwcDvPXblZ2au92vm7L8KE8se?usp=sharing", remaining_ok=True)
+
+download_model()
 
 @st.cache_resource
 def createMetadata():
